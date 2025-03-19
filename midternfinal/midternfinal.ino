@@ -1,7 +1,8 @@
- const int buttonPin = 9;
+const int buttonPin = 9;
 const int ledPins[] = {4, 5, 6, 7}; // Array to hold the LED pins (4 LEDs)
 const int numLeds = 4;               
-const int potPin = 1;               
+const int potPin = 1;  
+const int piezoPin = 21;             
 
 bool buttonState = 0;     
 bool lastButtonState = 0; 
@@ -40,7 +41,18 @@ void loop() {
  
   int brightness = map(potValue, 0, 1023, 0, 255); // Map the potentiometer value to a brightness (0-255)
 
+tone(piezoPin, 1000, 500);
 
+  tone(piezoPin, 420, 500);
+  
+  tone(piezoPin, 1000, 500);
+  
+  tone(piezoPin, 420, 500);
+  
+  tone(piezoPin, 1000, 500);
+  
+  
+  
   
   if (toggle) {
     for (int i = 0; i < numLeds; i++) {
