@@ -59,7 +59,7 @@ tone(piezoPin, 1000, 500);
       analogWrite(ledPins[i], brightness);  
     }
   } else {
-    
+        
     for (int i = 0; i < numLeds; i++) {
       analogWrite(ledPins[i], brightness);
       delay(200);
